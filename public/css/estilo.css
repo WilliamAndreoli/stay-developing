@@ -1,0 +1,811 @@
+/*Variáveis*/
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+    --color-white: #ffffff;
+    --color-purple: #c73aff;
+    --color-purple-dark: #9B2DC6;
+    --background-section-light: #f8f9fa;
+    --background-section-dark: #1E1E1E;
+    --card-background-light: #ffffff;
+    --card-background-dark: #2D2D2D;
+    --text-secondary-light: #6c757d;
+    --text-secondary-dark: #B0B0B0;
+}
+
+/* Estilo da barra de rolagem */
+/* Para navegadores baseados em WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c73aff; /* Cor do indicador da barra de rolagem */
+    border-radius: 6px; /* Raio da borda do indicador da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8000b3; /* Cor do indicador da barra de rolagem ao passar o mouse */
+}
+
+/*WhatsApp*/
+.whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+/*Config. Modos*/
+.color-toggle-button {
+    width: 40px; /* Defina uma largura adequada */
+    height: 40px; /* Defina uma altura adequada */
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #c73aff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-light {
+    background: url(../img/capa.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: black;
+}
+
+.home-dark {
+    background: url(../img/capa-dark.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: white;
+}
+
+/* Overlay para melhorar contraste */
+.home-light::before,
+.home-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.7)
+    );
+}
+
+.home-dark::before {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6)
+    );
+}
+
+/* Ajuste para conteúdo ficar sobre o overlay */
+#home .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .home-light,
+    .home-dark {
+        background-attachment: scroll;
+    }
+}
+
+.dark-mode {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.card-dark {
+    background-color: #000;
+    color: #fff; /* Defina a cor do texto para contrastar com o fundo escuro */
+}
+
+.card-light {
+    background-color: #fff;
+    color: #000; /* Defina a cor do texto para contrastar com o fundo claro */
+}
+
+/*Botão de retorno ao topo*/
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #c73aff;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Layout*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body, #home {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.box-home {
+    height: 50%;
+    padding: 10px;
+    background-color: rgba(199, 58, 255, 0.4);
+    border-radius: 20px;
+}
+
+/*Barra de navegação*/
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(199, 58, 255);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #8000b3;
+} 
+
+.bg-dark {
+    background-color: #000 !important;
+}
+
+.btn-outline-dark {
+    color: #c73aff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #c73aff;
+}
+
+.btn-outline-dark:hover {
+    color: white;
+    background-color: #c73aff;
+    background-image: none;
+    border-color: #000;
+}
+
+.navbar-light .navbar-toggler {
+    color: #c73aff;
+    border-color: rgba(0, 0, 0,.8);
+}
+
+.navegacao-secundaria a {
+    color: #c73aff;
+}
+
+/*Estrutura de conteúdos*/
+#home {
+    border-bottom: 1px solid #c73aff;
+    margin-top: 10%;
+}
+
+#sobre {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #c73aff;
+}
+
+#servicos {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #c73aff;
+}
+
+#profissional {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #c73aff;
+}
+
+#fale-comigo {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #c73aff;
+}
+
+#projetos {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #c73aff;
+}
+
+.caixa {
+    border-top: 1px dashed #c73aff;
+    border-bottom: 1px dashed #c73aff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.btn-custom {
+    color: white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    text-transform: uppercase;
+    background: #c73aff;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+
+.btn-custom:hover {
+    background: #9B2DC6;
+    color: #fff;
+}
+
+.btn-custom-projeto {
+    font-size: 0.7em;
+    color: white;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    text-transform: uppercase;
+    background: #c73aff;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+
+.btn-custom-projeto:hover {
+    background: #9B2DC6;
+    color: #fff;
+}
+
+.table-custom ul {
+    list-style-type:disc;
+}
+
+.table-custom ul li::marker {
+    color: #c73aff;
+}
+
+.img {
+    border-radius: 200px;
+    box-shadow: 20px 10px 50px #c73aff;
+}
+
+.rodape {
+    margin-top: 50px;
+    height: 50px;
+}
+
+.rodape h6 {
+    color: gray;
+    font-size: 0.8em;
+}
+
+/*Tipografia*/
+h1 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#home p {
+    font-size: 1.1em;
+    margin-bottom: 1.3em;
+}
+
+#sobre p {
+    font-size: 1.1em;
+}
+
+#servicos p {
+    font-size: 1.3em;
+}
+
+#servicos h3 {
+    margin-top: 22px;
+}
+
+#projetos h4 {
+    margin-top: 20px;
+    color: #c73aff;
+    font-size: 1em;
+}
+
+.titulo-projeto {
+    font-size: 1.4em;
+}
+
+#profissional p {
+    font-size: 1.2em;
+}
+
+#profissional h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#profissional h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#fale-comigo h5 {
+    font-size: 1em;
+    color: gray;
+}
+
+.profissional-descricao {
+    text-align: justify;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #c73aff;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #c73aff;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.texto-roxo {
+    color: #c73aff;
+}
+
+
+/*Media Queries*/
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query since this is the default in Bootstrap*/
+@media (min-width: 300px) { 
+    #home img {
+        display: none;
+    }
+
+    #sobre img {
+        width: 200px;
+    }
+
+    #profissional img {
+        width: 300px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    #home img {
+        display: none;
+    }
+/* 
+    .home-light {
+        background: url(../img/capa.png) no-repeat;
+        background-position: 60% -210%;
+    }
+    
+    .home-dark {
+        background: url(../img/capa-dark.png) no-repeat;
+        background-position: 60% -210%;
+    } */
+
+    #sobre img {
+        width: 300px;
+    }
+
+    #profissional img {
+        margin-bottom: 50px;
+    }
+
+    #projetos img {
+        width: 300px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    #home img {
+        display: block;
+        width: 400px;
+    }
+
+    #sobre img {
+        width: 350px;
+    }
+
+    #profissional img {
+        width: 300px;
+    }
+
+    #projetos img {
+        width: 500px;
+    }
+/* 
+    .home-light {
+        background: url(../img/capa.png) no-repeat;
+        background-position: 80% -200%;
+    }
+    
+    .home-dark {
+        background: url(../img/capa-dark.png) no-repeat;
+        background-position: 80% -200%;
+    } */
+
+    .navbar {
+        padding-right: 20px; /* Ajuste conforme necessário */
+        padding-left: 20px;  /* Ajuste conforme necessário */
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    #home p {
+        font-size: 1.5em;
+    }
+
+    #home img {
+        display: block;
+        width: 600px;
+    }
+/* 
+    .home-light {
+        background: url(../img/capa.png) no-repeat;
+        background-position: 100% -180%;
+    }
+    
+    .home-dark {
+        background: url(../img/capa-dark.png) no-repeat;
+        background-position: 100% -108%;
+    } */
+
+    #sobre img {
+        width: 400px;
+    }
+
+    #profissional img {
+        width: 400px;
+    }
+    
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+    #profissional img {
+        width: 450px;
+    }
+/* 
+    .home-light {
+        background: url(../img/capa.png) no-repeat;
+        background-position: 100% -108%;
+    }
+    
+    .home-dark {
+        background: url(../img/capa-dark.png) no-repeat;
+        background-position: 100% -108%;
+    } */
+    
+ }
+
+/* Estilos para a seção Fale Conosco */
+#fale-comigo {
+  background-color: #f8f9fa;
+}
+
+#fale-comigo .section-subtitle {
+  color: #c73aff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+#fale-comigo .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#fale-comigo .section-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info, .contact-message {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.contact-method {
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  background-color: #f8f9fa;
+}
+
+.contact-method i {
+  color: #c73aff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-method h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.contact-method p {
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list li i {
+  color: #c73aff;
+  margin-right: 10px;
+}
+
+.cta-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cta-message p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Loader */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #c73aff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animações */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(199, 58, 255, 0.1);
+}
+
+/* Melhorias na navegação */
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Melhorias nos botões */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Melhorias nas seções */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(199, 58, 255, 0.03) 0%, rgba(199, 58, 255, 0) 100%);
+  pointer-events: none;
+}
+
+/* Ajustes para tema escuro */
+.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode .navbar.scrolled {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode #fale-comigo {
+    background-color: var(--background-section-dark);
+}
+
+.dark-mode .contact-info,
+.dark-mode .contact-message {
+    background-color: var(--card-background-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .contact-method h4 {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .contact-method p,
+.dark-mode .section-description,
+.dark-mode .cta-message p {
+    color: var(--text-secondary-dark);
+}
+
+.dark-mode .contact-method:hover {
+    background-color: rgba(199, 58, 255, 0.1);
+}
+
+.dark-mode .cta-message {
+    background-color: var(--background-section-dark);
+}
+
+.dark-mode .benefits-list li {
+    color: var(--text-color-dark);
+}
+
+.dark-mode .card {
+    background-color: var(--card-background-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode .loader-wrapper {
+    background-color: var(--background-color-dark);
+}
+
+.dark-mode .loader {
+    border-color: #333;
+    border-top-color: var(--color-purple);
+}
+
+/* Ajustes na navegação para tema escuro */
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: var(--color-purple);
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--color-purple-dark);
+}
+
+.dark-mode .navbar-light .navbar-toggler {
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+}
+
+.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(199, 58, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

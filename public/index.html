@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Meta tags SEO -->
+  <meta name="description" content="Stay Developing - Transforme seu negócio com soluções digitais personalizadas. Desenvolvimento web, e-commerce, landing pages e muito mais.">
+  <meta name="keywords" content="desenvolvimento web, sites, landing page, e-commerce, programação, website, desenvolvimento, aplicações web, criar site, site, canoinhas">
+  <meta name="author" content="Stay Developing">
+  
+  <!-- Meta tags Open Graph -->
+  <meta property="og:title" content="Stay Developing - Soluções Digitais">
+  <meta property="og:description" content="Transforme seu negócio com soluções digitais personalizadas. Desenvolvimento web profissional.">
+  <meta property="og:image" content="img/logo.png">
+  <meta property="og:url" content="https://staydeveloping.com.br">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  
+  <!-- Preload de recursos críticos -->
+  <link rel="preload" href="css/estilo.css" as="style">
+  <link rel="preload" href="img/logo.png" as="image">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--Estilo css-->
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/96525c2b53.js" crossorigin="anonymous"></script>
+
+  <title>Stay Developing - Soluções Digitais Profissionais</title>
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <!--Botão de tema-->
+  <button id="color-toggle" onclick="trocaTema()" class="color-toggle-button">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path id="icon-path"
+        d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+    </svg>
+  </button>
+
+  <!--Botão Voltar ao Topo-->
+  <div class="back-to-top" id="back-to-top" style="display: block;">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px"
+      viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+    </svg>
+  </div>
+
+  <header><!--Inicio cabeçalho-->
+    <nav id="barra-navegacao" class="navbar navbar-expand-md navbar-light fixed-top"
+      style="border-bottom: 1px solid #c73aff;">
+      <div class="container">
+        <a href="#home" class="navbar-brand"><img id="img-logo" src="img/logo.png" width="220px"></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicos" class="nav-link">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profissional" class="nav-link">Profissional</a>
+            </li>
+            <li class="nav-item">
+              <a href="#fale-comigo" class="btn btn-md btn-outline-dark ml-4">Entre em Contato</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header><!--Final cabeçalho-->
+
+  <section id="home" class="d-flex home-light"><!--Inicio home-->
+    <div class="container align-self-center">
+      <div class="row">
+        <div class="col-md-6 box-home">
+          <h1>Entre você também para o <span class="texto-roxo">Mundo Digital</span></h1>
+          <p>
+            Eleve seu négocio a outro patamar através de sites
+            que captam novos clientes. Seja digital, seja atrativo,
+            seja <span class="texto-roxo">Stay Developing</span>.
+          </p>
+          <a href="#fale-comigo" class="btn btn-custom">Entre para o mundo digital</a>
+        </div>
+        <div class="col-md-6 align-self-baseline">
+          <img class="img-home" src="img/site.png">
+        </div>
+      </div>
+    </div>
+  </section><!--Final home-->
+
+  <section id="sobre"><!--Inicio sobre-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Soluções digitais conforme a sua necessidade</h2>
+          <h1>Tenha mais engajamento com a
+            <span class="texto-roxo">Stay Developing</span>.
+          </h1>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4 caixa">
+          <h3>Landing Page</h3>
+          <p>
+            Transforme Visitantes em Clientes com Nossa Landing Page!
+            Ideal para Promover Seu Produto de Maneira Clara e Persuasiva.
+            A Solução Perfeita para Você!
+          </p>
+        </div>
+        <div class="col-md-4 caixa">
+          <h3>Institucional/Blog</h3>
+          <p>
+            Estabeleça sua Presença Online Agora!
+            Ideal para empresas, comércios, organizações ou instituições que
+            buscam uma presença oficial na web.
+          </p>
+        </div>
+        <div class="col-md-4 caixa">
+          <h3>E-commerce</h3>
+          <p>
+            Sua loja virtual completa! Explore uma plataforma online para comprar
+            e vender produtos e serviços.
+            Gerencie seu negócio, amplie suas oportunidades de crescimento
+            e alcance novos horizontes no comércio online.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <img src="img/sobre.png" width="300">
+        </div>
+        <div class="col-md-6 caixa">
+          <h2>Sempre melhorando seu digital.</h2>
+          <p>
+            Nossa missão é impulsionar empresas em todo o Brasil para o cenário digital, criando websites que não apenas
+            impressionam, mas também alcançam resultados excepcionais.
+            Especializada em desenvolvimento WEB,
+            e-commerce e criação de landing pages que não só cativam, mas também convertem,
+            a <span class="texto-roxo">Stay Developing</span> é a mente criativa por trás de soluções
+            online que capturam a essência e os objetivos de cada marca,
+            empresa ou profissional.
+            Aqui, cada projeto vai além da entrega; é a concretização da sua
+            <span class="texto-roxo">visão digital</span>, moldada com habilidade técnica e uma abordagem estética inovadora.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section><!--Final sobre-->
+
+  <section id="servicos"><!--Inicio serviços-->
+    <div class="container">
+      <div class="row text-right">
+        <div class="col-md-12">
+          <h2>Impulsione seu negócio</h2>
+          <h1>As soluções que seu negócio precisa.</h1>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff" d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 
+                      32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 
+                      416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z" />
+                </svg>
+              </div>
+              <h3 class="card-title">Criação de Sites Personalizados</h3>
+              <p class="card-text">
+                Desenvolvimento de sites do seu jeito
+                para digitalizar seu negócio.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+
+
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff"
+                    d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" />
+                </svg>
+              </div>
+              <h3 class="card-title">Otimização de Sites</h3>
+              <p class="card-text">
+                Otimizamos seu site para um melhor desempenho
+                e velocidade, garantindo a usabilidade de seus clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+
+
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff" d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 
+                      114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 
+                      24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 
+                      32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 
+                      64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z" />
+                </svg>
+              </div>
+              <h3 class="card-title">Suporte Técnico</h3>
+              <p class="card-text">
+                Suporte para todos os momentos, mantendo seu site funcional
+                e operante.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff"
+                    d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
+                </svg>
+              </div>
+              <h3 class="card-title">SEO Personalizado</h3>
+              <p class="card-text">
+                Táticas de SEO personalizadas,
+                desenvolvidas para aprimorar a visibilidade online do seu website.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff"
+                    d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
+                </svg>
+              </div>
+              <h3 class="card-title">Design Personalizado</h3>
+              <p class="card-text">
+                Criação de Identidade Visual da sua marca personalizada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="90" width="90"
+                  viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="#c73aff"
+                    d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                </svg>
+              </div>
+              <h3 class="card-title">Desenvolvimento de E-commerce</h3>
+              <p class="card-text">
+                Desenvolvimento de
+                e-commerce sob medida para seus produtos ou serviços.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--Final serviços-->
+
+  <!--Inicio projetos-->
+  <!-- <section id="projetos">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Principais projetos entregues</h2>
+          <h1>Criatividade e inovação para solucionar seus problemas!</h1>
+        </div>
+
+        <div class="col-md-6 align-self-center">
+          <img src="img/projeto-adv.png">
+        </div>
+
+        <div class="col-md-6 align-self-center">
+          <h4>Desenvolvimento personalizado</h4>
+          <h1 class="titulo-projeto">Institucional Advocacia Andreoli</h1>
+          <p>
+            Desenvolvido para ser mais que um site institucional. Construido de forma simples, sendo
+            atrativo para aqueles que precisam de consultoria jurídica especializada e
+            uma total atenção a seus casos judiciais!
+          </p>
+          <a href="" class="btn btn-custom-projeto">Ver site</a>
+        </div>
+      </div>
+    </div>
+  </section>Final projetos -->
+
+  <section id="profissional"><!--Inicio profissional-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Conheça o profissional</h2>
+          <h1>Dedicação e amor a profissão</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img" src="img/profissional.png" width="400px">
+        </div>
+        <div class="col-md-6">
+          <h2>William Vinicius Wendt Andreoli</h2>
+          <p class="profissional-descricao">
+            Engenheiro de Software formado, apaixonado pela área da tecnologia.
+            Com mais de 3 anos de experiência em desenvolvimento de software, a área de TI já é minha vida.
+            Empenhado em buscar o melhor na qualidade de software,
+            visando sempre a satisfação total do cliente.
+            Utilizando tecnologias como HTML, CSS, JavaScript, Java e os mais diversos frameworks como
+            Angular e SpringBoot.
+            Além dos conhecimentos na área de desenvolvimento web, também priorizando
+            a Cybersegurança, garantindo sempre a total segurança nos softwares desenvolvidos.
+          </p>
+          <h3>Skills</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="table-custom">
+                <ul>
+                  <li>
+                    HTML
+                  </li>
+                  <li>
+                    CSS
+                  </li>
+                  <li>
+                    JavaScript
+                  </li>
+                  <li>
+                    PHP
+                  </li>
+                  <li>
+                    Java
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="table-custom">
+                <ul>
+                  <li>
+                    Python
+                  </li>
+                  <li>
+                    Bootstrap
+                  </li>
+                  <li>
+                    Angular
+                  </li>
+                  <li>
+                    SpringBoot
+                  </li>
+                  <li>
+                    WordPress
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--Final profissional-->
+
+  <section id="fale-comigo" class="py-5"><!--Inicio fale comigo-->
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-12 text-center">
+          <h2 class="section-subtitle">FALE CONOSCO</h2>
+          <h1 class="section-title">Transforme seu negócio agora!</h1>
+          <p class="section-description">Estamos prontos para ajudar você a alcançar o próximo nível digital</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="contact-info p-4">
+            <h2 class="mb-4">Entre em contato</h2>
+            <div class="contact-methods">
+              <div class="contact-method mb-4">
+                <i class="fas fa-phone-alt"></i>
+                <h4>WhatsApp</h4>
+                <p>Atendimento rápido e personalizado</p>
+                <a href="https://wa.me/554799106017" 
+                   class="btn btn-whatsapp" 
+                   target="_blank">
+                   <i class="fab fa-whatsapp"></i> Iniciar Conversa
+                </a>
+              </div>
+              
+              <div class="contact-method mb-4">
+                <i class="fas fa-envelope"></i>
+                <h4>Email</h4>
+                <p>developingstay@gmail.com</p>
+              </div>
+
+              <div class="contact-method">
+                <i class="fas fa-clock"></i>
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta: 09h às 18h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="contact-message p-4">
+            <h3>Por que escolher a Stay Developing?</h3>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i> Desenvolvimento personalizado para seu negócio</li>
+              <li><i class="fas fa-check"></i> Suporte técnico especializado</li>
+              <li><i class="fas fa-check"></i> Design moderno e responsivo</li>
+              <li><i class="fas fa-check"></i> Otimização para mecanismos de busca (SEO)</li>
+              <li><i class="fas fa-check"></i> Tecnologias atualizadas e seguras</li>
+            </ul>
+            <div class="cta-message mt-4">
+              <p>Pronto para começar sua transformação digital?</p>
+              <a href="https://wa.me/554799106017" 
+                 class="btn btn-custom" 
+                 target="_blank">
+                 Solicitar Orçamento
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--Final fale comigo-->
+
+  <section><!--Inicio redes-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 align-self-center">
+          <img id="img-redes-logo" src="img/logo.png" width="400px">
+        </div>
+        <div class="col-md-2 mt-3">
+          <h6>Acesso rápido</h6>
+          <ul class="navbar-nav ml-auto navegacao-secundaria">
+            <li class="nav-item">
+              <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servicos" class="nav-link">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profissional" class="nav-link">Profissional</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 mt-3">
+          <h6>Redes sociais</h6>
+          <ul class="navbar-nav ml-auto navegacao-secundaria">
+            <li class="nav-item">
+              <a href="https://github.com/WilliamAndreoli" class="nav-link">Github</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.linkedin.com/in/william-andreoli-329434223/" class="nav-link">Linkedin</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/stay_developing/" class="nav-link">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section><!--Final redes-->
+
+  <footer><!--Inicio rodapé-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="rodape text-center">
+            <h6>&copy;2024 STAY DEVELOPING Todos os direitos reservados.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!--Final rodapé-->
+
+  <!--Troca tema JS-->
+  <script src="js/trocaTema.js"></script>
+
+  <!--Retorna ao topo JS-->
+  <script src="js/retornaAoTopo.js"></script>
+
+  <!--Animações JS-->
+  <script src="js/animations.js"></script>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+    <script src="js/enviaEmail.js"></script>
+
+  </body>
+
+</html>

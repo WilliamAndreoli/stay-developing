@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Meta tags SEO -->
+  <meta name="robots" content="noindex,nofollow">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--Estilo css-->
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/96525c2b53.js" crossorigin="anonymous"></script>
+
+  <title>Página não encontrada - Stay Developing</title>
+
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(199, 58, 255, 0.1) 0%, rgba(199, 58, 255, 0) 100%);
+    }
+
+    .error-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: bold;
+      color: #c73aff;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .error-message {
+      font-size: 24px;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .error-description {
+      margin-bottom: 2rem;
+      color: #666;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .dark-mode .error-message {
+      color: #fff;
+    }
+
+    .dark-mode .error-description {
+      color: #ccc;
+    }
+
+    .error-image {
+      max-width: 300px;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 576px) {
+      .error-code {
+        font-size: 80px;
+      }
+
+      .error-message {
+        font-size: 20px;
+      }
+
+      .error-image {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--Botão de tema-->
+  <button id="color-toggle" onclick="trocaTema()" class="color-toggle-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <path id="icon-path"
+        d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+    </svg>
+  </button>
+
+  <div class="error-page">
+    <div class="error-content">
+      <img src="img/logo.png" alt="Stay Developing" class="error-image" id="img-logo">
+      <div class="error-code">404</div>
+      <h1 class="error-message">Página não encontrada</h1>
+      <p class="error-description">
+        Ops! Parece que você se perdeu no caminho. A página que você está procurando não existe ou foi movida.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="btn btn-custom">
+          <i class="fas fa-home"></i> Voltar para Home
+        </a>
+        <a href="/#fale-comigo" class="btn btn-outline-dark">
+          <i class="fas fa-envelope"></i> Entre em Contato
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--Troca tema JS-->
+  <script src="js/trocaTema.js"></script>
+
+  <!-- JavaScript (Opcional) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html> 
