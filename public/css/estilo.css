@@ -412,6 +412,12 @@ h6 {
         width: 300px;
         margin-bottom: 50px;
     }
+    
+    .table-custom li {
+        margin-left: 10px;
+    }
+
+    
 }
 
 /* Small devices (landscape phones, 576px and up)*/
@@ -440,6 +446,10 @@ h6 {
 
     #projetos img {
         width: 300px;
+    }
+
+    .table-custom li {
+        margin-left: 10px;
     }
 }
 
