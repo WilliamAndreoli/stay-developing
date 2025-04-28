@@ -417,6 +417,14 @@ h6 {
         margin-left: 10px;
     }
 
+    .card {
+        margin-top: 10px;
+    }
+
+    #designPersonalizadoCard {
+        margin-top: 0px;
+    }
+
     
 }
 
@@ -486,6 +494,12 @@ h6 {
         padding-right: 20px; /* Ajuste conforme necessário */
         padding-left: 20px;  /* Ajuste conforme necessário */
     }
+
+    #designPersonalizadoCard {
+        margin-top: 40px;
+    }
+    
+
  }
 
 /* Large devices (desktops, 992px and up)*/
